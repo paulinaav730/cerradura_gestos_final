@@ -1,2 +1,3 @@
 0 Abre
 1 Cierra
+2 Nada

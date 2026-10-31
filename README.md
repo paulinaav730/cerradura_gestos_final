@@ -35,8 +35,8 @@ pip install streamlit opencv-python keras paho-mqtt pillow numpy
 ## Configuración MQTT
 - Broker: broker.hivemq.com
 - Puerto: 1883
-- Cliente ID: APP_CERR
-- Tópico de publicación: "IMIA"
+- Cliente ID: APP_CERR_<aleatorio>
+- Tópico de publicación: "cerradura_tm_7c3f"
 
 ## Uso
 1. Inicia la aplicación:
@@ -109,8 +109,8 @@ def on_message(client, userdata, message):
 ## Personalización del Modelo
 El sistema utiliza un modelo Keras preentrenado:
 - Entrada: Imágenes 224x224x3
-- Salida: 2 clases (abrir/cerrar)
-- Umbral de confianza: 0.3
+- Salida: 3 clases (Abre, Cierra, Nada)
+- Umbral de confianza: 0.6 (ajustable en la barra lateral)
 
 ## Seguridad
 - Comunicación MQTT no encriptada (considerar implementar TLS)
